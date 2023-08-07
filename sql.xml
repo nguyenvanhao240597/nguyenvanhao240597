@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="sql-select-hoa">  
+  <select id="getHoa">
+    select * from 
+    hoa
+  </select>
+  <select id="themhoa">
+    INSERT INTO hoa
+    VALUES (#{mahoa},#{tenhoa},#{macd},#{giaban},#{mota},#{hinh});
+  </select>
+
+  <update id="suahoa">
+    UPDATE hoa
+    SET tenhoa = #{tenhoa},macd = #{macd},giaban = #{giaban},mota = #{mota},hinh =  git#{hinh}
+    WHERE mahoa = #{mahoa}
+  </update>
+</mapper>
